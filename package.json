@@ -6,9 +6,9 @@
   "author": "luckywei",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vitepress dev docs --no-cache",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "dev": "vitepress dev docs --no-cache",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
   },
   "devDependencies": {
     "vitepress": "^1.0.0-rc.31"
