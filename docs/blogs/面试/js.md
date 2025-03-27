@@ -203,7 +203,7 @@ async function fetchData() {
 1. JSON.parse(JSON.stringify(obj))
 2. 递归拷贝
 3. 使用第三方库，如lodash的_.cloneDeep()
-4. 使用Proxy和Reflect  [Proxy 深浅拷贝](https://juejin.cn/post/7012790044561768461#heading-4)
+4. 使用Proxy和Reflect
 ## 原型和原型链
 每个 JavaScript 对象都有一个原型对象，对象从原型继承属性和方法
 
