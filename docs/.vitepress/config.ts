@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'Luckywei Blog',
+  base: '/vitepress-blog/',
   description: '前端学习博客',
   themeConfig: {
     // siteTitle: 'Luckywei Blog',
