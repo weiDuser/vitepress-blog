@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ae as l}from"./chunks/framework.C8gPwPr5.js";const g=JSON.parse('{"title":"前言","description":"","frontmatter":{},"headers":[],"relativePath":"blogs/简单算法.md","filePath":"blogs/简单算法.md"}'),h={name:"blogs/简单算法.md"};function k(p,s,t,e,E,r){return n(),a("div",null,s[0]||(s[0]=[l("",18)]))}const y=i(h,[["render",k]]);export{g as __pageData,y as default};

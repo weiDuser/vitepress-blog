@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ae as h}from"./chunks/framework.C8gPwPr5.js";const g=JSON.parse('{"title":"前言：","description":"","frontmatter":{},"headers":[],"relativePath":"blogs/手写专题.md","filePath":"blogs/手写专题.md"}'),k={name:"blogs/手写专题.md"};function l(p,s,t,e,E,r){return n(),a("div",null,s[0]||(s[0]=[h("",53)]))}const y=i(k,[["render",l]]);export{g as __pageData,y as default};
