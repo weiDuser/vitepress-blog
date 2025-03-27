@@ -129,10 +129,122 @@ promise.then(result => {
 });
 ```
 ## async和 await
+async 和 await 是 JavaScript 中处理异步操作的语法糖，它们让异步代码看起来更像同步代码，更易于理解和维护
+
+### 1. async 函数
+
+async 函数是一种特殊的函数，它总是返回一个 Promise。你可以使用 await 关键字来等待一个 Promise 的解决。
+
+```js
+async function fetchData() {
+  return 'data';  // 自动被包装成 Promise.resolve('data')
+}
+// 等价于
+function fetchData() {
+  return Promise.resolve('data');
+}
+```
+### 2. await 关键字
+
+await 关键字只能在 async 函数内部使用。它会暂停 async 函数的执行，等待 Promise 的解决，然后返回 Promise 的结果。
+```js
+async function fetchData() {
+  const data = await fetch('some-url');
+  return data;
+}
+```
+### 3. 错误处理
+
+async 函数内部的错误会被自动捕获并被 Promise 拒绝。你可以使用 try/catch 来处理这些错误。
+```js
+async function fetchData() {
+  try {
+    const data = await fetch('some-url');
+    return data;  // 如果 fetch 失败，这里的代码不会执行  
+  }
+  catch (error) {
+    console.error(error);
+    throw error;  // 重新抛出错误，以便外部处理
+  }
+}
+```
+### 4. async/await 的优势
+- 可读性更强 - 代码结构更接近同步代码，逻辑更清晰
+- 错误处理更简单 - 可以使用传统的 try/catch 结构
+- 调试更容易 - 断点可以在 await 表达式处正常工作
+- 条件语句更自然 - 在 Promise 链中处理条件逻辑比较复杂，而 async/await 可以使用普通的 if/else
 
 ## this指向
+`this`: 函数的执行主体， 和执行上下文不是一个概念
++ 全局的`this`是window
++ `this`是谁和函数在哪执行，以及在哪定义都没有必然的联系
+
+### 按照以下规律来确定执行主体是谁
+
+1. 给当前元素的某个事件行为绑定方法，执行对应的方法，方法中的`this`是当前元素
+2. 函数执行，首先看函数名之前是否有`.`，有`.`前面是谁`this`就是谁，没有`.`非严格模式下`this`就是window
+3. 自执行函数中的`this`一般都是window
+4. 回调函数中的`this`一般也都是window
+5. 构造函数中的`this`是当前类的实例
+6. 箭头函数没有自己的`this`，用到的`this`都是上下文中的`this`
+7. 基于call/apply/bind可以强制改变`this`的指向
+8. 严格模式下，全局`this`是undefined
+
 ## 深拷贝和浅拷贝
+浅拷贝只复制对象的第一层属性，如果属性是引用类型，则只复制引用地址。
+深拷贝会递归复制对象的所有属性，包括引用类型的属性。
+
+### 常见的浅拷贝方法
+1. Object.assign()
+2. 展开运算符(...)
+3. Array.prototype.slice()
+4. Array.prototype.concat()
+### 常见的深拷贝方法
+1. JSON.parse(JSON.stringify(obj))
+2. 递归拷贝
+3. 使用第三方库，如lodash的_.cloneDeep()
+4. 使用Proxy和Reflect  [Proxy 深浅拷贝](https://juejin.cn/post/7012790044561768461#heading-4)
 ## 原型和原型链
+每个 JavaScript 对象都有一个原型对象，对象从原型继承属性和方法
+
+原型链是对象之间通过原型继承的一种关系链。当访问一个对象的属性时，如果该对象本身没有这个属性，JavaScript 会沿着原型链向上查找，直到找到该属性或者到达原型链的顶部（null）
 ## 闭包
+闭包是指一个函数可以访问其外部作用域中的变量，即使在其外部函数执行完毕后
+
 ## 防抖和节流
+防抖是指在事件被触发 n 秒后再执行回调，如果在这 n 秒内事件又被触发，则重新计时。
+```js
+function debounce(fn, delay, immediate = false) {
+  let timer = null;
+  
+  return function(...args) {
+    if (timer) clearTimeout(timer);
+    
+    if (immediate && !timer) {
+      fn.apply(this, args);
+    }
+    
+    timer = setTimeout(() => {
+      if (!immediate) fn.apply(this, args);
+      timer = null;
+    }, delay);
+  };
+}
+```
+节流是指在事件被触发后，在 n 秒内只会执行一次回调。
+```js
+function throttle(fn, delay) {
+  let timer = null;
+  
+  return function(...args) {
+    if (!timer) {
+      timer = setTimeout(() => {
+        fn.apply(this, args);
+        timer = null;
+      }, delay);
+    }
+  };
+}
+
+```
 ## 事件循环
