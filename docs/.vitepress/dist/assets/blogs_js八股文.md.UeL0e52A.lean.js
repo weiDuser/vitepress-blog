@@ -1,0 +1,1 @@
+import{_ as s,o as i,c as a,R as n}from"./chunks/framework.UjU5Kp2a.js";const y=JSON.parse('{"title":"前言","description":"","frontmatter":{},"headers":[],"relativePath":"blogs/js八股文.md","filePath":"blogs/js八股文.md"}'),h={name:"blogs/js八股文.md"},t=n("",123),l=[t];function p(k,e,r,E,d,g){return i(),a("div",null,l)}const c=s(h,[["render",p]]);export{y as __pageData,c as default};

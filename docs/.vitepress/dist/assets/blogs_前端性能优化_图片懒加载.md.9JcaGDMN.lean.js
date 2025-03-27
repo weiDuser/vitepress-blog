@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a}from"./chunks/framework.UjU5Kp2a.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"blogs/前端性能优化/图片懒加载.md","filePath":"blogs/前端性能优化/图片懒加载.md"}'),o={name:"blogs/前端性能优化/图片懒加载.md"};function s(r,_,c,n,p,d){return t(),a("div")}const m=e(o,[["render",s]]);export{l as __pageData,m as default};

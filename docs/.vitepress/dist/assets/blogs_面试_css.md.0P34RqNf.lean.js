@@ -1,0 +1,1 @@
+import{_ as s,o as i,c as a,R as n}from"./chunks/framework.UjU5Kp2a.js";const o=JSON.parse('{"title":"css相关","description":"","frontmatter":{},"headers":[],"relativePath":"blogs/面试/css.md","filePath":"blogs/面试/css.md"}'),l={name:"blogs/面试/css.md"},h=n("",69),p=[h];function t(k,e,d,E,r,g){return i(),a("div",null,p)}const y=s(l,[["render",t]]);export{o as __pageData,y as default};

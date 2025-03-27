@@ -1,0 +1,1 @@
+import{_ as s,o as i,c as a,R as n}from"./chunks/framework.UjU5Kp2a.js";const F=JSON.parse('{"title":"前言：","description":"","frontmatter":{},"headers":[],"relativePath":"blogs/手写专题.md","filePath":"blogs/手写专题.md"}'),h={name:"blogs/手写专题.md"},k=n("",53),l=[k];function p(t,e,E,r,d,g){return i(),a("div",null,l)}const c=s(h,[["render",p]]);export{F as __pageData,c as default};

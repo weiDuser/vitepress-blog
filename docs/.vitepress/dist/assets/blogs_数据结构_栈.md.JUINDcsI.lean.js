@@ -1,0 +1,1 @@
+import{_ as s,o as i,c as a,R as t}from"./chunks/framework.UjU5Kp2a.js";const g=JSON.parse('{"title":"栈","description":"","frontmatter":{},"headers":[],"relativePath":"blogs/数据结构/栈.md","filePath":"blogs/数据结构/栈.md"}'),n={name:"blogs/数据结构/栈.md"},l=t("",29),p=[l];function e(h,k,d,r,c,o){return i(),a("div",null,p)}const y=s(n,[["render",e]]);export{g as __pageData,y as default};

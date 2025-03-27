@@ -1,0 +1,1 @@
+import{_ as s,o as i,c as a,R as n}from"./chunks/framework.UjU5Kp2a.js";const o=JSON.parse('{"title":"队列","description":"","frontmatter":{},"headers":[],"relativePath":"blogs/数据结构/队列.md","filePath":"blogs/数据结构/队列.md"}'),t={name:"blogs/数据结构/队列.md"},h=n("",30),l=[h];function p(e,k,d,r,E,g){return i(),a("div",null,l)}const y=s(t,[["render",p]]);export{o as __pageData,y as default};
