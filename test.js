@@ -32,3 +32,6 @@ function insert(element, index) {
   }
   return false // {7}
 }
+
+
+// 测试
