@@ -84,8 +84,8 @@ export default defineConfig({
               text: 'vue',
               link: '/blogs/面试/vue'
             }, {
-              text: 'react',
-              link: '/blogs/面试/react'
+              text: '性能优化',
+              link: '/blogs/面试/性能优化'
             }, {
               text: '场景题',
               link: '/blogs/面试/场景题'

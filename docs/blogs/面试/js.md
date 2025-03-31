@@ -248,3 +248,8 @@ function throttle(fn, delay) {
 
 ```
 ## 事件循环
+
+1. 事件循环机制是指浏览器或Node.js的一种解决JavaScript单线程运行时不会阻塞的一种机制
+2. 事件循环机制的执行顺序是：先执行全局(同步)代码，再执行微队列，再执行其他队列
+3. 微队列包括：Promise.then、MutationObserver、process.nextTick
+4. 微队列优先级最高，交互队列(用户操作产生的事件)优先级高，延时队列优先级中
